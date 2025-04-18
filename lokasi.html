@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lokasi - MyBowl</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fffaf5;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 24px;
+      color: #e74c3c;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+        color: #e74c3c; 
+      }
+
+    nav a.active {
+        color: black;                
+        background-color: #e74c3c;   
+        border-radius: 8px;          
+        padding: 12px 24px;           
+      }
+      
+    .lokasi-content {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .lokasi-content h1 {
+      font-size: 36px;
+      color: #e74c3c;
+      margin-bottom: 20px;
+    }
+
+    .lokasi-content p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .map-container {
+      display: flex;
+      justify-content: center;
+      padding: 0 20px 60px;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">MyBowl</div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="promo.html">Promo</a>
+      <a href="pesan.html">Pesan</a>
+      <a href="lokasi.html" class="active">Lokasi</a>
+      <a href="contact.html">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="lokasi-content">
+    <h1>Lokasi MyBowl</h1>
+    <p>Kunjungi kami langsung di lokasi berikut:</p>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.4658359330525!2d112.7158933!3d-7.420617899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbb3f83cb4cd%3A0xa255d294d64cb9fd!2sJl.%20Kremb.%20Jaya%20Utara%20Gg.%20V%20No.30%2C%20Kemayoran%2C%20Kec.%20Krembangan%2C%20Surabaya%2C%20Jawa%20Timur%2060176!5e0!3m2!1sid!2sid!4v1713346527500!5m2!1sid!2sid" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MyBowl. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

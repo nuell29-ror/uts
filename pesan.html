@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesan - MyBowl</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fffaf5;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 24px;
+      color: #e74c3c;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+        color: #e74c3c; 
+      }
+
+    nav a.active {
+        color: black;                
+        background-color: #e74c3c;   
+        border-radius: 8px;          
+        padding: 12px 24px;           
+      }
+    
+
+    .menu-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .menu-section h2 {
+      text-align: center;
+      font-size: 48px;
+      margin-bottom: 40px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .menu-item {
+      text-align: center;
+    }
+
+    .menu-item img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .menu-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .menu-item p {
+      margin-top: 12px;
+      font-weight: 600;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MyBowl</div>
+        <nav>
+          <a href="index.html">Beranda</a>
+          <a href="tentang.html">Tentang</a>
+          <a href="promo.html">Promo</a>
+          <a href="pesan.html" class="active">Pesan</a>
+          <a href="lokasi.html">Lokasi</a>
+          <a href="contact.html">Kontak</a>
+        </nav>
+      </header>
+
+    <div class="menu-section">
+      <h2>Menu MyBowl</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img src="ayamkatsu.jpeg" alt="Nasi Ayam Katsu">
+          <p>Nasi Ayam Katsu</p>
+        </div>
+        <div class="menu-item">
+          <img src="nasiteriyaki.jpeg" alt="Nasi Teriyaki">
+          <p>Nasi Teriyaki</p>
+        </div>
+        <div class="menu-item">
+          <img src="nasiayamsambalmatah.jpeg" alt="Nasi Ayam Sambal Matah">
+          <p>Nasi Ayam Sambal Matah</p>
+        </div>
+        <div class="menu-item">
+          <img src="nasikatsucurry.jpg" alt="Nasi Katsu Curry">
+          <p>Nasi Katsu Curry</p>
+        </div>
+      </div>
+    </div>
+
+  <footer>
+    <p>&copy; 2025 MyBowl. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

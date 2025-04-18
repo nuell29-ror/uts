@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubungi Kami - MyBowl</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fffaf5;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 24px;
+      color: #e74c3c;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+        color: #e74c3c; 
+      }
+
+    nav a.active {
+        color: black;                
+        background-color: #e74c3c;   
+        border-radius: 8px;          
+        padding: 12px 24px;           
+      }
+
+    .contact-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #e74c3c;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 500px;
+      margin: 0 auto 30px auto;
+    }
+
+    .btn-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background-color: #e74c3c;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #c0392b;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">MyBowl</div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="promo.html">Promo</a>
+      <a href="pesan.html">Pesan</a>
+      <a href="lokasi.html">Lokasi</a>
+      <a href="contact.html" class="active">Kontak</a>        
+    </nav>
+  </header>
+
+  <section class="contact-content">
+    <h1>Hubungi Kami</h1>
+    <p>
+      Ada masalah, kritik, atau saran?<br>
+      Kami sangat terbuka untuk mendengarnya!<br>
+      Silakan hubungi kami melalui WhatsApp atau Instagram.
+    </p>
+
+    <div class="btn-container">
+      <a href="https://wa.me/6281234567890" class="btn" target="_blank">Hubungi via WhatsApp</a>
+      <a href="https://instagram.com/mybowl_id" class="btn" target="_blank">Kunjungi Instagram</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MyBowl. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

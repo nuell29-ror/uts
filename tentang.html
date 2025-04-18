@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami - MyBowl</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fffaf5;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 24px;
+      color: #e74c3c;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+        color: #e74c3c; 
+      }
+
+    nav a.active {
+        color: black;                
+        background-color: #e74c3c;   
+        border-radius: 8px;          
+        padding: 12px 24px;           
+      }
+      
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    .about-text {
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .vision-mission {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px; 
+      margin-top: 40px;
+    }
+
+    .vision, .mission {
+      text-align: center;
+      width: 48%; 
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .vision h3, .mission h3 {
+      color: #e74c3c;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .mission p {
+      text-align: left; 
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .vision, .mission {
+        width: 100%; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">MyBowl</div>
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html" class="active">Tentang</a>
+        <a href="promo.html">Promo</a>
+        <a href="pesan.html">Pesan</a>
+        <a href="lokasi.html">Lokasi</a>
+        <a href="contact.html">Kontak</a>        
+    </nav>
+  </header>
+
+  <section class="section" id="tentang">
+    <h2>Tentang Kami</h2>
+    <div class="about-text">
+      <p>MyBowl adalah UMKM kuliner yang menyajikan ricebowl dengan cita rasa autentik dan bahan-bahan berkualitas. Kami percaya bahwa makanan yang lezat bisa dinikmati oleh semua orang, dengan harga yang terjangkau. Sejak didirikan, kami berkomitmen untuk memberikan pelayanan yang hangat dan ramah, serta menjaga kualitas setiap porsi yang disajikan.</p>
+    </div>
+
+    <div class="vision-mission">
+      <div class="vision">
+        <h3>Visi Kami</h3>
+        <p>Menjadi penyedia ricebowl terbaik yang menyatukan cita rasa lokal dengan kualitas premium. Kami ingin menciptakan pengalaman makan yang menyenangkan dan penuh kehangatan bagi pelanggan kami di seluruh Indonesia.</p>
+      </div>
+      <div class="mission">
+        <h3>Misi Kami</h3>
+        <p>1. Menyajikan ricebowl dengan bahan baku lokal terbaik.<br>
+        2. Memastikan pelayanan yang cepat, ramah, dan profesional.<br>
+        3. Menjaga harga tetap terjangkau bagi semua kalangan.<br>
+        4. Membangun hubungan jangka panjang dengan pelanggan melalui kepercayaan dan kualitas.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MyBowl. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
