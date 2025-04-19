@@ -307,29 +307,27 @@
 
   <script>
     let editIndex = -1;
-    let totalHarga = 0;
-
+  
     function tambahPesanan(button) {
       const card = button.closest('.menu-item');
       const namaMenu = card.getAttribute('data-name');
-      const harga = parseInt(card.getAttribute('data-price'));
       document.getElementById("promo-nama").value = namaMenu;
       document.getElementById("jumlah").value = 1;
       editIndex = -1;
-      document.getElementById("total-harga").innerText = `Total: Rp ${totalHarga.toLocaleString()}`;
     }
-
+  
     function simpanPesanan() {
       const nama = document.getElementById("promo-nama").value;
       const jumlah = parseInt(document.getElementById("jumlah").value);
       const tbody = document.getElementById("tabel-pesanan").querySelector("tbody");
-      const hargaPerItem = parseInt(document.querySelector('.menu-item[data-name="'+nama+'"]').getAttribute('data-price'));
-
+      const item = document.querySelector('.menu-item[data-name="'+nama+'"]');
+      
+      if (!item) return alert("Menu tidak ditemukan.");
       if (!nama || jumlah < 1) return alert("Isi data dengan benar.");
-
+  
+      const hargaPerItem = parseInt(item.getAttribute('data-price'));
       const hargaTotal = hargaPerItem * jumlah;
-      totalHarga += hargaTotal;
-
+  
       if (editIndex >= 0) {
         const row = tbody.rows[editIndex];
         row.cells[0].innerText = nama;
@@ -347,38 +345,47 @@
           <button class="hapus-button" onclick="hapusPesanan(this)">Hapus</button>
         `;
       }
-
+  
       document.getElementById("promo-nama").value = "";
       document.getElementById("jumlah").value = "";
-      document.getElementById("total-harga").innerText = `Total: Rp ${totalHarga.toLocaleString()}`;
+      hitungUlangTotal();
     }
-
+  
     function editPesanan(button) {
       const row = button.parentElement.parentElement;
       document.getElementById("promo-nama").value = row.cells[0].innerText;
       document.getElementById("jumlah").value = row.cells[1].innerText;
       editIndex = row.rowIndex - 1;
     }
-
+  
     function hapusPesanan(button) {
       const row = button.parentElement.parentElement;
-      const hargaPerItem = parseInt(row.cells[2].innerText.replace('Rp ', '').replace(',', ''));
-      totalHarga -= hargaPerItem;
       row.remove();
-      document.getElementById("total-harga").innerText = `Total: Rp ${totalHarga.toLocaleString()}`;
+      hitungUlangTotal();
     }
-
+  
+    function hitungUlangTotal() {
+      const rows = document.querySelectorAll("#tabel-pesanan tbody tr");
+      let total = 0;
+      rows.forEach(row => {
+        const hargaText = row.cells[2].innerText.replace('Rp ', '').replace(/\./g, '').replace(/,/g, '');
+        total += parseInt(hargaText) || 0;
+      });
+      document.getElementById("total-harga").innerText = `Total: Rp ${total.toLocaleString()}`;
+    }
+  
     function prosesPembayaran() {
-      if (totalHarga > 0) {
-        alert(`Pembayaran sebesar Rp ${totalHarga.toLocaleString()} telah diproses.`);
-        totalHarga = 0;
+      const totalText = document.getElementById("total-harga").innerText;
+      const total = parseInt(totalText.replace('Total: Rp ', '').replace(/\./g, '').replace(/,/g, '')) || 0;
+  
+      if (total > 0) {
+        alert(`Pembayaran sebesar Rp ${total.toLocaleString()} telah diproses.`);
         document.getElementById("tabel-pesanan").querySelector("tbody").innerHTML = '';
-        document.getElementById("total-harga").innerText = `Total: Rp 0`;
+        hitungUlangTotal();
       } else {
         alert("Tidak ada pesanan yang dapat diproses.");
       }
     }
-  </script>
-
+  </script>  
 </body>
 </html>
