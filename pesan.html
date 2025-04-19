@@ -37,18 +37,17 @@
 
     nav a:hover {
         color: #e74c3c; 
-      }
+    }
 
     nav a.active {
         color: black;                
         background-color: #e74c3c;   
         border-radius: 8px;          
         padding: 12px 24px;           
-      }
-    
+    }
 
     .menu-section {
-      padding: 60px 20px;
+      padding: 40px 20px;
       max-width: 1200px;
       margin: auto;
     }
@@ -70,6 +69,7 @@
 
     .menu-item {
       text-align: center;
+      position: relative;
     }
 
     .menu-item img {
@@ -90,6 +90,39 @@
       font-weight: 600;
     }
 
+    .harga {
+      font-size: 16px;
+      color: #e74c3c;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .pesan-button {
+      padding: 12px 20px;
+      background: linear-gradient(45deg, #e74c3c, #c0392b);
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      display: inline-block;
+    }
+
+    .pesan-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(45deg, #c0392b, #e74c3c);
+    }
+
+    .pesan-button:active {
+      transform: scale(1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      background: #e74c3c;
+    }
+
     footer {
       background-color: #333;
       color: white;
@@ -97,47 +130,255 @@
       padding: 20px;
       margin-top: 60px;
     }
+
+    .pesan-section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+    }
+
+    .pesan-section input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    .pesan-section button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(45deg, #e74c3c, #c0392b);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .pesan-section button:hover {
+      background: linear-gradient(45deg, #c0392b, #e74c3c);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .pesan-section button:active {
+      background: #e74c3c;
+      box-shadow: none;
+      transform: translateY(0);
+    }
+
+    #tabel-pesanan {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #tabel-pesanan th, #tabel-pesanan td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #tabel-pesanan th {
+      background-color: #e74c3c;
+      color: white;
+      font-weight: 600;
+    }
+
+    #tabel-pesanan tbody tr:hover {
+      background-color: #f7f7f7;
+    }
+
+    #tabel-pesanan button {
+      padding: 6px 12px;
+      margin: 0 5px;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #tabel-pesanan button:hover {
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    .edit-button {
+      background-color: #f39c12;
+      border: none;
+    }
+
+    .hapus-button {
+      background-color: #c0392b;
+      border: none;
+    }
+
+    .total-section {
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #e74c3c;
+    }
+
   </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">MyBowl</div>
-        <nav>
-          <a href="index.html">Beranda</a>
-          <a href="tentang.html">Tentang</a>
-          <a href="promo.html">Promo</a>
-          <a href="pesan.html" class="active">Pesan</a>
-          <a href="lokasi.html">Lokasi</a>
-          <a href="contact.html">Kontak</a>
-        </nav>
-      </header>
+  <header>
+    <div class="logo">MyBowl</div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="promo.html">Promo</a>
+      <a href="pesan.html" class="active">Pesan</a>
+      <a href="lokasi.html">Lokasi</a>
+      <a href="contact.html">Kontak</a>
+    </nav>
+  </header>
 
-    <div class="menu-section">
-      <h2>Menu MyBowl</h2>
-      <div class="menu-grid">
-        <div class="menu-item">
-          <img src="ayamkatsu.jpeg" alt="Nasi Ayam Katsu">
-          <p>Nasi Ayam Katsu</p>
-        </div>
-        <div class="menu-item">
-          <img src="nasiteriyaki.jpeg" alt="Nasi Teriyaki">
-          <p>Nasi Teriyaki</p>
-        </div>
-        <div class="menu-item">
-          <img src="nasiayamsambalmatah.jpeg" alt="Nasi Ayam Sambal Matah">
-          <p>Nasi Ayam Sambal Matah</p>
-        </div>
-        <div class="menu-item">
-          <img src="nasikatsucurry.jpg" alt="Nasi Katsu Curry">
-          <p>Nasi Katsu Curry</p>
-        </div>
+  <div class="menu-section">
+    <h2>Menu MyBowl</h2>
+    <div class="menu-grid">
+      <div class="menu-item" data-name="Nasi Ayam Katsu" data-price="12000">
+        <img src="ayamkatsu.jpeg" alt="Nasi Ayam Katsu">
+        <p>Nasi Ayam Katsu</p>
+        <div class="harga">Rp 12.000</div>
+        <button class="pesan-button" onclick="tambahPesanan(this)">Pesan</button>
+      </div>
+
+      <div class="menu-item" data-name="Nasi Teriyaki" data-price="12000">
+        <img src="nasiteriyaki.jpeg" alt="Nasi Teriyaki">
+        <p>Nasi Teriyaki</p>
+        <div class="harga">Rp 12.000</div>
+        <button class="pesan-button" onclick="tambahPesanan(this)">Pesan</button>
+      </div>
+
+      <div class="menu-item" data-name="Nasi Ayam Sambal Matah" data-price="15000">
+        <img src="nasiayamsambalmatah.jpeg" alt="Nasi Ayam Sambal Matah">
+        <p>Nasi Ayam Sambal Matah</p>
+        <div class="harga">Rp 15.000</div>
+        <button class="pesan-button" onclick="tambahPesanan(this)">Pesan</button>
+      </div>
+
+      <div class="menu-item" data-name="Nasi Katsu Curry" data-price="15000">
+        <img src="nasikatsucurry.jpg" alt="Nasi Katsu Curry">
+        <p>Nasi Katsu Curry</p>
+        <div class="harga">Rp 15.000</div>
+        <button class="pesan-button" onclick="tambahPesanan(this)">Pesan</button>
       </div>
     </div>
+  </div>
+
+  <section class="pesan-section">
+    <h3 style="text-align: center; color: #e74c3c;">Daftar Pesanan</h3>
+    <input id="promo-nama" type="text" placeholder="Nama Menu" readonly />
+    <input id="jumlah" type="number" min="1" placeholder="Jumlah" />
+    <button onclick="simpanPesanan()">Simpan Pesanan</button>
+
+    <table id="tabel-pesanan">
+      <thead>
+        <tr>
+          <th>Nama Menu</th>
+          <th>Jumlah</th>
+          <th>Harga</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="total-section" id="total-harga">Total: Rp 0</div>
+    <button onclick="prosesPembayaran()" class="pesan-button">Proses Pembayaran</button>
+  </section>
 
   <footer>
     <p>&copy; 2025 MyBowl. All rights reserved.</p>
   </footer>
+
+  <script>
+    let editIndex = -1;
+    let totalHarga = 0;
+
+    function tambahPesanan(button) {
+      const card = button.closest('.menu-item');
+      const namaMenu = card.getAttribute('data-name');
+      const harga = parseInt(card.getAttribute('data-price'));
+      document.getElementById("promo-nama").value = namaMenu;
+      document.getElementById("jumlah").value = 1;
+      editIndex = -1;
+      document.getElementById("total-harga").innerText = `Total: Rp ${totalHarga.toLocaleString()}`;
+    }
+
+    function simpanPesanan() {
+      const nama = document.getElementById("promo-nama").value;
+      const jumlah = parseInt(document.getElementById("jumlah").value);
+      const tbody = document.getElementById("tabel-pesanan").querySelector("tbody");
+      const hargaPerItem = parseInt(document.querySelector('.menu-item[data-name="'+nama+'"]').getAttribute('data-price'));
+
+      if (!nama || jumlah < 1) return alert("Isi data dengan benar.");
+
+      const hargaTotal = hargaPerItem * jumlah;
+      totalHarga += hargaTotal;
+
+      if (editIndex >= 0) {
+        const row = tbody.rows[editIndex];
+        row.cells[0].innerText = nama;
+        row.cells[1].innerText = jumlah;
+        row.cells[2].innerText = `Rp ${hargaTotal.toLocaleString()}`;
+        editIndex = -1;
+      } else {
+        const row = tbody.insertRow();
+        row.insertCell(0).innerText = nama;
+        row.insertCell(1).innerText = jumlah;
+        row.insertCell(2).innerText = `Rp ${hargaTotal.toLocaleString()}`;
+        const aksi = row.insertCell(3);
+        aksi.innerHTML = `
+          <button class="edit-button" onclick="editPesanan(this)">Edit</button>
+          <button class="hapus-button" onclick="hapusPesanan(this)">Hapus</button>
+        `;
+      }
+
+      document.getElementById("promo-nama").value = "";
+      document.getElementById("jumlah").value = "";
+      document.getElementById("total-harga").innerText = `Total: Rp ${totalHarga.toLocaleString()}`;
+    }
+
+    function editPesanan(button) {
+      const row = button.parentElement.parentElement;
+      document.getElementById("promo-nama").value = row.cells[0].innerText;
+      document.getElementById("jumlah").value = row.cells[1].innerText;
+      editIndex = row.rowIndex - 1;
+    }
+
+    function hapusPesanan(button) {
+      const row = button.parentElement.parentElement;
+      const hargaPerItem = parseInt(row.cells[2].innerText.replace('Rp ', '').replace(',', ''));
+      totalHarga -= hargaPerItem;
+      row.remove();
+      document.getElementById("total-harga").innerText = `Total: Rp ${totalHarga.toLocaleString()}`;
+    }
+
+    function prosesPembayaran() {
+      if (totalHarga > 0) {
+        alert(`Pembayaran sebesar Rp ${totalHarga.toLocaleString()} telah diproses.`);
+        totalHarga = 0;
+        document.getElementById("tabel-pesanan").querySelector("tbody").innerHTML = '';
+        document.getElementById("total-harga").innerText = `Total: Rp 0`;
+      } else {
+        alert("Tidak ada pesanan yang dapat diproses.");
+      }
+    }
+  </script>
 
 </body>
 </html>

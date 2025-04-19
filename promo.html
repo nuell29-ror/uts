@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Promo - MyBowl</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
     body {
       margin: 0;
@@ -36,16 +36,16 @@
     }
 
     nav a:hover {
-        color: #e74c3c; 
-      }
+      color: #e74c3c;
+    }
 
     nav a.active {
-        color: black;                
-        background-color: #e74c3c;   
-        border-radius: 8px;          
-        padding: 12px 24px;           
-      }
-      
+      color: black;
+      background-color: #e74c3c;
+      border-radius: 8px;
+      padding: 12px 24px;
+    }
+
     .promo-section {
       padding: 60px 20px;
       background-color: #fffaf5;
@@ -72,6 +72,7 @@
       overflow: hidden;
       text-align: left;
       transition: transform 0.3s ease;
+      padding-bottom: 15px;
     }
 
     .promo-card:hover {
@@ -92,8 +93,14 @@
 
     .promo-card p {
       font-size: 16px;
-      margin: 0 16px 12px;
+      margin: 0 16px 4px;
       color: #555;
+    }
+
+    .promo-card .harga {
+      font-weight: bold;
+      color: #333;
+      margin: 0 16px 8px;
     }
 
     .promo-date {
@@ -101,6 +108,64 @@
       font-size: 14px;
       margin: 0 16px 16px;
       color: #888;
+    }
+
+    .promo-card button {
+      margin: 0 16px;
+      padding: 10px;
+      background-color: #e74c3c;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      width: calc(100% - 32px);
+    }
+
+    .promo-card button:hover {
+      background-color: #c0392b;
+    }
+
+    .pesan-section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .pesan-section input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: inherit;
+    }
+
+    .pesan-section button {
+      width: 100%;
+      padding: 12px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .pesan-section button:hover {
+      background-color: #c0392b;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 10px;
     }
 
     footer {
@@ -114,47 +179,156 @@
 </head>
 <body>
 
-  <header>
-    <div class="logo">MyBowl</div>
-    <nav>
-      <a href="index.html">Beranda</a>
-      <a href="tentang.html">Tentang</a>
-      <a href="promo.html" class="active">Promo</a>
-      <a href="pesan.html">Pesan</a>
-      <a href="lokasi.html">Lokasi</a>
-      <a href="contact.html">Kontak</a>
-    </nav>
-  </header>
+<header>
+  <div class="logo">MyBowl</div>
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="tentang.html">Tentang</a>
+    <a href="promo.html" class="active">Promo</a>
+    <a href="pesan.html">Pesan</a>
+    <a href="lokasi.html">Lokasi</a>
+    <a href="contact.html">Kontak</a>
+  </nav>
+</header>
 
-  <section class="promo-section">
-    <h2>Promo Spesial dari MyBowl</h2>
-    <div class="promo-grid">
-      <div class="promo-card">
-        <img src="promo1.jpeg" alt="Promo 1">
-        <h3>Diskon Ricebowl 30%</h3>
-        <p>Dapatkan potongan harga untuk menu terfavorit kami.</p>
-        <span class="promo-date">Berlaku hingga 30 April 2025</span>
-      </div>
-
-      <div class="promo-card">
-        <img src="promo2.png" alt="Promo 2">
-        <h3>Gratis Es Teh Manis</h3>
-        <p>Beli 2 ricebowl dan dapatkan 1 Es Teh gratis!</p>
-        <span class="promo-date">Berlaku hingga 10 Mei 2025</span>
-      </div>
-
-      <div class="promo-card">
-        <img src="promo3.png" alt="Promo 3">
-        <h3>Menu Kombo Keluarga</h3>
-        <p>4 ricebowl + 4 minuman hanya Rp80.000</p>
-        <span class="promo-date">Berlaku hingga 31 Mei 2025</span>
-      </div>
+<section class="promo-section">
+  <h2>Promo Spesial dari MyBowl</h2>
+  <div class="promo-grid" id="promo-list">
+    <div class="promo-card" data-nama="Diskon Ricebowl 30%" data-harga="12000">
+      <img src="promo1.jpeg" alt="Promo 1">
+      <h3>Diskon Ricebowl 30%</h3>
+      <p>Dapatkan potongan harga untuk menu terfavorit kami.</p>
+      <p class="harga">Rp 12.000</p>
+      <span class="promo-date">Berlaku hingga 30 April 2025</span>
+      <button onclick="tambahPesanan(this)">Pesan</button>
     </div>
-  </section>
 
-  <footer>
-    <p>&copy; 2025 MyBowl. All rights reserved.</p>
-  </footer>
+    <div class="promo-card" data-nama="Gratis Es Teh Manis" data-harga="25000">
+      <img src="promo2.png" alt="Promo 2">
+      <h3>Gratis Es Teh Manis</h3>
+      <p>Beli 2 ricebowl dan dapatkan 1 Es Teh gratis!</p>
+      <p class="harga">Rp 25.000</p>
+      <span class="promo-date">Berlaku hingga 10 Mei 2025</span>
+      <button onclick="tambahPesanan(this)">Pesan</button>
+    </div>
+
+    <div class="promo-card" data-nama="Menu Kombo Keluarga" data-harga="80000">
+      <img src="promo3.png" alt="Promo 3">
+      <h3>Menu Kombo Keluarga</h3>
+      <p>4 ricebowl + 4 minuman hanya Rp80.000</p>
+      <p class="harga">Rp 80.000</p>
+      <span class="promo-date">Berlaku hingga 31 Mei 2025</span>
+      <button onclick="tambahPesanan(this)">Pesan</button>
+    </div>
+  </div>
+</section>
+
+<section class="pesan-section">
+  <h3 style="text-align: center; color: #e74c3c;">Daftar Pesanan Promo</h3>
+  <input id="promo-nama" type="text" placeholder="Nama Promo" readonly />
+  <input id="jumlah" type="number" min="1" placeholder="Jumlah" />
+  <button onclick="simpanPesanan()">Simpan Pesanan</button>
+
+  <table id="tabel-pesanan">
+    <thead>
+      <tr>
+        <th>Nama Promo</th>
+        <th>Jumlah</th>
+        <th>Harga</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div style="margin-top: 20px; text-align: right; font-weight: bold;">
+    Total: Rp <span id="total-harga">0</span>
+  </div>
+  <button onclick="bayar()" style="margin-top: 10px;">Bayar</button>
+</section>
+
+<footer>
+  <p>&copy; 2025 MyBowl. All rights reserved.</p>
+</footer>
+
+<script>
+  let editIndex = -1;
+  let totalHarga = 0;
+
+  function tambahPesanan(button) {
+    const card = button.closest('.promo-card');
+    const namaPromo = card.getAttribute('data-nama');
+    const harga = card.getAttribute('data-harga');
+    document.getElementById("promo-nama").value = namaPromo;
+    document.getElementById("promo-nama").setAttribute("data-harga", harga);
+    document.getElementById("jumlah").value = 1;
+    editIndex = -1;
+  }
+
+  function simpanPesanan() {
+    const nama = document.getElementById("promo-nama").value;
+    const jumlah = parseInt(document.getElementById("jumlah").value);
+    const harga = parseInt(document.getElementById("promo-nama").getAttribute("data-harga")) || 0;
+    const tbody = document.getElementById("tabel-pesanan").querySelector("tbody");
+
+    if (!nama || jumlah < 1) return alert("Isi data dengan benar.");
+
+    if (editIndex >= 0) {
+      const row = tbody.rows[editIndex];
+      row.cells[0].innerText = nama;
+      row.cells[1].innerText = jumlah;
+      row.cells[2].innerText = harga;
+      editIndex = -1;
+    } else {
+      const row = tbody.insertRow();
+      row.insertCell(0).innerText = nama;
+      row.insertCell(1).innerText = jumlah;
+      row.insertCell(2).innerText = harga;
+      const aksi = row.insertCell(3);
+      aksi.innerHTML = `
+        <button onclick="editPesanan(this)">Edit</button>
+        <button onclick="hapusPesanan(this)">Hapus</button>
+      `;
+    }
+
+    document.getElementById("promo-nama").value = "";
+    document.getElementById("promo-nama").removeAttribute("data-harga");
+    document.getElementById("jumlah").value = "";
+    hitungTotal();
+  }
+
+  function editPesanan(button) {
+    const row = button.parentElement.parentElement;
+    document.getElementById("promo-nama").value = row.cells[0].innerText;
+    document.getElementById("jumlah").value = row.cells[1].innerText;
+    document.getElementById("promo-nama").setAttribute("data-harga", row.cells[2].innerText);
+    editIndex = row.rowIndex - 1;
+  }
+
+  function hapusPesanan(button) {
+    const row = button.parentElement.parentElement;
+    row.remove();
+    hitungTotal();
+  }
+
+  function hitungTotal() {
+    const tbody = document.getElementById("tabel-pesanan").querySelector("tbody");
+    let total = 0;
+    for (let i = 0; i < tbody.rows.length; i++) {
+      const jumlah = parseInt(tbody.rows[i].cells[1].innerText);
+      const harga = parseInt(tbody.rows[i].cells[2].innerText);
+      total += jumlah * harga;
+    }
+    totalHarga = total;
+    document.getElementById("total-harga").innerText = totalHarga.toLocaleString('id-ID');
+  }
+
+  function bayar() {
+    if (totalHarga === 0) return alert("Belum ada pesanan.");
+    alert("Pembayaran berhasil. Total yang dibayar: Rp " + totalHarga.toLocaleString('id-ID'));
+    location.reload();
+  }
+</script>
 
 </body>
 </html>
